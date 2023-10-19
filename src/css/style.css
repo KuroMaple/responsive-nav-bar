@@ -1,0 +1,70 @@
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.nav {
+  width: 100%;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.nav-items.expanded {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: height 10s;
+}
+
+.nav-items.collapsed, .nav-items{
+  visibility: hidden;
+  display: none;
+}
+
+
+.material-icons {
+  padding: 10px;
+}
+
+.screen {
+  background-color: aqua;
+}
+
+
+@media screen and (min-width: 768px) {
+  .nav {
+    height: fit-content;
+  }
+  .screen {
+    background-color: blue;
+  }
+  .nav-icon {
+    display: none;
+    visibility: hidden;
+  }
+  .nav-items.expanded, .nav-items.collapsed, .nav-items  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    visibility: visible;
+    text-align: left;
+    padding: 10px;
+    gap: 15px;
+  }
+}
+
